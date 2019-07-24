@@ -10,7 +10,18 @@
 #hello_world("es") should return "Hola Mundo"
 #hello_world("de") should return "Hallo Welt"
 
+def hello_world (lang)
+    greeting = 'Hello World'
+    if lang == 'es'
+        greeting = 'Hola Mundo'
+    elsif lang == 'de'
+        greeting = 'Hallo Welt'
+    else
+        greeting
+    end
+end
 
+p hello_world('de')
 
 # The Grade Assigner
 # Write a Method named assign_grade that:
@@ -20,7 +31,27 @@
 # assign_grade(90) should return A
 # assign_grade(75) should return C
 
+def assign_grade (grade)
+    letter = 'A'
+    if grade >= 90
+        letter
+    elsif grade < 90 && grade >= 80
+        letter = 'B'
+    elsif grade < 80 && grade >= 70
+        letter = 'C'
+    elsif grade < 70 && grade >= 60
+        letter = 'D'
+    elsif grade < 60 && grade >= 50
+        letter = 'E'
+    elsif grade < 50 && grade >= 1
+        letter = 'F'
+    else
+       letter = 'Enter a number between 1 to 100' 
+    end
+        
+end
 
+p assign_grade(85)
 # The Pluralizer
 # Write a method named pluralizer that:
 #
